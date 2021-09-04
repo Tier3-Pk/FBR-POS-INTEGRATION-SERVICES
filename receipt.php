@@ -1,7 +1,14 @@
 /*
-This Connects to FBR FISICAL MODULE --> Gets FBR Invoice Number against sale --> Prints Receipt with FBR Invoice Number and matching barcode --> Updates the sales table with matching FBR Fsicial Invoice Number 
+This Connects to FBR FISICAL MODULE --> Gets FBR Invoice Number against sale --> Prints Receipt with FBR Invoice Number and matching barcode --> Updates the sales table with matching FBR Fsicial Invoice Number
 */
 
+/*
+
+**IMPORTANT Copyright Notice**
+
+This Source code is the intellectual property of the creator - Tier3 Pakistan (www.tier3.pk). It can not be used without permission. Ownership of POS Software. The Software and all the Intellectual Property Rights therein are and will remain the sole and exclusive property of Tier3 Pakistan and its licensors. Tier3 will reproduce on each copy it makes of the Software, and not alter, remove or obscure, the Intellectual Property Rights notices of Tier3 Pakistan and its licensors that may appear on the Software as delivered by Tier3. “Intellectual Property Rights” means patent rights, copyrights, trade secrets, trademarks, know-how and any other intellectual property rights recognized in any country or jurisdiction in the world. 
+
+*/
 
 
 <div id="receipt_wrapper" style="font-size:<?php echo $this->config->item('receipt_font_size');?>px">

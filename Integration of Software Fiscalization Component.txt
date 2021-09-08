@@ -1,0 +1,69 @@
+Integration of Software Fiscalization Component
+
+Invoice Model Details
+
+The fields of the invoice model are given below. 
+
+Name	Data Type	Status	Sample Value
+-InvoiceNumber	varchar(30)	Blank	
+-POSID (POS Registration Number given by FBR on registration)	bigint	Compulsory	100000
+-USIN	varchar(50)	Compulsory	001897
+-RefUSIN	varchar(50)	Optional	001896
+-DateTime	datetime	Compulsory	2018-11-01 00:00:00.000
+-BuyerName	varchar(150)	Optional	Shahzad Ahmed
+-BuyerNTN	Varchar(9)	Optional	1234567-8
+-BuyerCNIC	Varchar(13)	Optional	1111122222223
+-BuyerPhoneNumber	varchar(20)	Optional	923001234567
+-TotalSaleValue	double	Compulsory	1,298 (Sum of Item Sales Values) Exclusive of Tax and Discount
+-TotalTaxCharged	double	Compulsory	221  (Sum of Item Tax)
+-Discount	double	Optional	380 (Sum of Item Discount)
+=FurtherTax	double	Optional	0.00 (Sum of Further Tax)
+-TotalBillAmount	double	Compulsory	1,519
+-PaymentMode	Int	Compulsory	
+Cash
+Card
+Gift Voucher
+Loyalty Card
+Mixed
+Cheque
+-InvoiceType	Int	Compulsory	
+New
+Debit
+Credit
+List<InvoiceItems>	list	Compulsory
+Invoice Data 1
+
+Table No. 2 (recursive, will contain multiple items record in an invoice)
+
+-Name	Data Type	Status	Sample Value
+-ItemCode	varchar(50)	Compulsory	0001
+-ItemName	varchar(150)	Compulsory	Blanket
+-PCTCode	varchar(8)	Compulsory	01011000 (Should be less than or equal to 8)(Pakistan Custom Tariff Code)
+-Quantity	double	Compulsory	1.00
+-TaxRate	float	Compulsory	17
+-SaleValue	double	Compulsory	1,298 (Actual Sale Price on which Tax Calculated) Exclusive of Tax and Discount
+-Discount	double	Optional	380.00
+-FurtherTax	double	Optional	0.00
+-TaxCharged	double	Compulsory	221 (Actual Tax )
+-TotalAmount	double	Compulsory	1,519
+-InvoiceType	Int	Compulsory	
+1. New
+
+3. Credit
+
+11. 3rd Schedule New
+
+12. 3rd Schedule Credit
+
+( If an item falls under 3rd schedule category then use 11 for new item and use 12 for 3rd schedule item return invoice. )
+
+RefUSIN	Varchar	Optional (In case of Credit or Debit Note)	
+001897
+
+Invoice Item 1
+
+Return Fiscal Invoice Number
+
+Json Response string from FBR Web API
+
+{\”FBRInvoiceNumber\”:11000120181112000369,\”Response\”:\”Invoice received successfully\”,\”Code\”:\”100\”}

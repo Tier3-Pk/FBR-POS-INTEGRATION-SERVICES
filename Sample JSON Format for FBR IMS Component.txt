@@ -1,0 +1,51 @@
+Sample JSON Format to POST to FBR IMS Component
+{
+“InvoiceNumber”:””,
+“POSID”:110014,
+“USIN”:”USIN0″,
+“DateTime”:”2020-01-01 12:00:00″,
+“BuyerNTN”:”1234567-8″,
+“BuyerCNIC”:”12345-1234567-8″,
+“BuyerName”:”Buyer Name”,
+“BuyerPhoneNumber”:”0000-0000000″,
+“TotalBillAmount”:0.0,
+“TotalQuantity”:0.0,
+“TotalSaleValue”:0.0,
+“TotalTaxCharged”:0.0,
+“Discount”:0.0,
+“FurtherTax”:0.0,
+“PaymentMode”:1,
+
+“RefUSIN”:null,
+“InvoiceType”:1,
+“Items”:[
+{
+“ItemCode”:”IT_1011″,
+“ItemName”:”Test Item”,
+“Quantity”:1.0,
+“PCTCode”:”11001010″,
+“TaxRate”:0.0,
+“SaleValue”:0.0,
+“TotalAmount”:0.0,
+“TaxCharged”:0.0,
+“Discount”:0.0,
+“FurtherTax”:0.0,
+“InvoiceType”:1,
+“RefUSIN”:null
+},
+
+{
+“ItemCode”:”IT_1012″,
+“ItemName”:”Test Item”,
+“Quantity”:1.0,
+“PCTCode”:”11001010″,
+“TaxRate”:0.0,
+“SaleValue”:0.0,
+“TotalAmount”:0.0,
+“TaxCharged”:0.0,
+“Discount”:0.0,
+“FurtherTax”:0.0,
+“InvoiceType”:1,
+“RefUSIN”:null
+}
+] }

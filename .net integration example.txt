@@ -1,0 +1,75 @@
+.Net Code Example:
+
+Fill the invoice object
+
+Invoice objInv = new Invoice();
+
+objInv.InvoiceNumber = string.Empty;
+
+objInv.POSID = 123123;
+
+objInv.USIN = “123457”;
+
+objInv.DateTime = DateTime.Now;
+
+objInv.BuyerNTN = “1234567-9”;
+
+objInv.BuyerCNIC = “12345-1234567-8”;
+
+objInv.BuyerName = “Buyer Name
+
+objInv.BuyerPhoneNumber = “0345-1234567”;
+
+objInv.PaymentMode = 1;
+
+objInv.TotalSaleValue = 0;
+
+objInv.TotalQuantity = 0;
+
+objInv.TotalBillAmount = 0;
+
+objInv.TotalTaxCharged = 0;
+
+objInv.Discount = 1000;
+
+objInv.FurtherTax = 100;
+
+objInv.InvoiceType = 1;
+
+objInv.Items = Items();
+
+private List<InvoiceItems> Items()
+
+{
+
+List<InvoiceItems> lst = new List<InvoiceItems>();
+
+InvoiceItems objItem = new InvoiceItems();
+
+objItem.ItemCode = “0000”;
+
+objItem.ItemName = “Item Name”;
+
+objItem.Quantity = 3;
+
+objItem.TotalAmount = Convert.ToDouble(3000.00);
+
+objItem.SaleValue = Convert.ToDouble(3180);
+
+objItem.TaxCharged = Convert.ToDouble(180);
+
+objItem.TaxRate = 6;
+
+objItem.PCTCode = “11001010”;
+
+objItem.FurtherTax = 20;
+
+objItem.InvoiceType = 1;
+
+objItem.Discount = 500;
+
+lst.Add(objItem);
+
+return lst;
+
+}

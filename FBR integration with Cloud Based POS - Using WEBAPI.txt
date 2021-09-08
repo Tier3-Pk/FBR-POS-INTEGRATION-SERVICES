@@ -1,0 +1,36 @@
+Web Client to post data from Cloud and get the response
+Below code is used to call the WebAPI. JSON string is passed to the function along with API URL to which data is being posted.
+
+Sandbox URL:
+
+https://esp.fbr.gov.pk:8244/FBR/v1/api/Live/PostData
+
+Production URL:
+
+https://gw.fbr.gov.pk/imsp/v1/api/Live/PostData
+
+using System.Net.Http;
+
+using Newtonsoft.Json;
+
+HttpClient client = new HttpClient();
+
+client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(“Bearer”, “1298b5eb-b252-3d97-8622-a4a69d5bf818”);
+
+StringContent content = new StringContent(JsonConvert.SerializeObject(objinvoice), Encoding.UTF8, “application/json”);
+
+System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+
+HttpResponseMessage response = client.PostAsync(“https://esp.fbr.gov.pk:8244/FBR/v1/api/Live/PostData“, content).Result;
+
+if (response.IsSuccessStatusCode)
+
+{
+
+Console.WriteLine(“Response from API”);
+
+Console.WriteLine(“———————————————“);
+
+Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+
+}

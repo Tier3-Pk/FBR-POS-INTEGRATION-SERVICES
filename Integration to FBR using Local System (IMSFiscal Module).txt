@@ -1,0 +1,25 @@
+WebClient to post data to provided URL and get the response
+
+Below code is used to call the WebAPI. JSON string is passed to the function along with API URL to which data is being posted.
+
+using System.Net.Http;
+
+using Newtonsoft.Json;
+
+HttpClient Client = new HttpClient();
+
+var content = new StringContent(JsonConvert.SerializeObject(objinvoice), Encoding.UTF8, “application/json”);
+
+HttpResponseMessage response = Client.PostAsync(“http://localhost:8524/api/IMSFiscal/GetInvoiceNumberByModel”, content).Result;
+
+if (response.IsSuccessStatusCode)
+
+{
+
+Console.WriteLine(“Response from API”);
+
+Console.WriteLine(“———————————————“);
+
+Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+
+}

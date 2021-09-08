@@ -1,0 +1,11 @@
+GET Endpoint
+
+Request:
+Open new tab in Postman and write URL: http://localhost:8524/api/IMSFiscal/Get
+
+Response:
+
+[
+“Service is responding”
+
+] 

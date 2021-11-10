@@ -1,8 +1,8 @@
 Known Errors - FBR POS Integration WebApi Integration
 
-Access failure for API: /FBR/v1, version: v1 status: (900908) - Resource forbidden - Check token / IP for Cloud POS
+Access failure for API: /FBR/v1, version: v1 status: (900908) - Resource forbidden - Check your auth token / IP for Cloud POS set in e FBR portal
 Required OAuth credentials not provided. Make sure your API invocation call has a header: "Authorization: Bearer ACCESS_TOKEN" - Make sure you are sending proper auth header
-No matching resource found for given API Request - Chnage request from Get to POST or vice versa
+No matching resource found for given API Request - Change request from Get to POST or vice versa
 
 
 Sand Box request - 
